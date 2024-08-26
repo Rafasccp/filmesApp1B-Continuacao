@@ -16,12 +16,15 @@ namespace filmesApp1A.Models
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseLazyLoadingProxies();
-            optionsBuilder.UseNpgsql("Host=localhost;Database=filmes1A;Username=postgres;Password=postgre");
+            optionsBuilder.UseNpgsql("Host=localhost;Database=filmes1B;Username=postgres;Password=postgres");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Pais>().HasData(new Pais { Nome = "EUA", Id = 1 });
+            modelBuilder.Entity<Pais>().HasData(
+                new Pais { Nome = "EUA", Id = 1 },
+                new Pais { Nome = "Brasil", Id = 2}
+                );
         }
     }
 }

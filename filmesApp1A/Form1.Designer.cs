@@ -29,68 +29,55 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            dgvAtores = new DataGridView();
             atorBindingSource = new BindingSource(components);
-            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            nomeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            nacionalidadeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dgvAtores).BeginInit();
+            button1 = new Button();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)atorBindingSource).BeginInit();
             SuspendLayout();
-            // 
-            // dgvAtores
-            // 
-            dgvAtores.AutoGenerateColumns = false;
-            dgvAtores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvAtores.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, nomeDataGridViewTextBoxColumn, nacionalidadeDataGridViewTextBoxColumn });
-            dgvAtores.DataSource = atorBindingSource;
-            dgvAtores.Location = new Point(227, 71);
-            dgvAtores.Name = "dgvAtores";
-            dgvAtores.Size = new Size(363, 150);
-            dgvAtores.TabIndex = 0;
             // 
             // atorBindingSource
             // 
             atorBindingSource.DataSource = typeof(Models.Ator);
             // 
-            // idDataGridViewTextBoxColumn
+            // button1
             // 
-            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            idDataGridViewTextBoxColumn.HeaderText = "Id";
-            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            button1.Location = new Point(61, 43);
+            button1.Name = "button1";
+            button1.Size = new Size(136, 23);
+            button1.TabIndex = 0;
+            button1.Text = "Gerenciar Atores";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // nomeDataGridViewTextBoxColumn
+            // button2
             // 
-            nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
-            nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
-            nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            // 
-            // nacionalidadeDataGridViewTextBoxColumn
-            // 
-            nacionalidadeDataGridViewTextBoxColumn.DataPropertyName = "Nacionalidade";
-            nacionalidadeDataGridViewTextBoxColumn.HeaderText = "Nacionalidade";
-            nacionalidadeDataGridViewTextBoxColumn.Name = "nacionalidadeDataGridViewTextBoxColumn";
+            button2.Location = new Point(61, 86);
+            button2.Name = "button2";
+            button2.Size = new Size(136, 23);
+            button2.TabIndex = 1;
+            button2.Text = "Gerenciar Filmes";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(dgvAtores);
+            AutoSize = true;
+            ClientSize = new Size(267, 140);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            MaximizeBox = false;
             Name = "Form1";
-            Text = "Form1";
-            Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)dgvAtores).EndInit();
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Menu";
             ((System.ComponentModel.ISupportInitialize)atorBindingSource).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private DataGridView dgvAtores;
-        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn nacionalidadeDataGridViewTextBoxColumn;
         private BindingSource atorBindingSource;
+        private Button button1;
+        private Button button2;
     }
 }
